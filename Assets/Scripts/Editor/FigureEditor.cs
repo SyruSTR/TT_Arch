@@ -10,10 +10,12 @@ public class FigureEditor : Editor
 {
     public override void OnInspectorGUI()
     {
+        base.OnInspectorGUI();
         Figure figure = (Figure) target;
 
-        figure.Size =  EditorGUILayout.IntSlider(figure.Size, 1,50);
-        figure.ChangeFigureSize();
-        //figure.ChangeFigureSize(figure.Size);
+        if (GUILayout.Button("Изменить размер"))
+        {
+            figure.ChangeFigureSize();
+        }
     }
 }
