@@ -12,7 +12,7 @@ public class FigureEditor : Editor
     {
         Figure figure = (Figure) target;
 
-        figure.Size = EditorGUILayout.IntSlider(figure.Size, 50, 500);
+        figure.Size =  EditorGUILayout.IntSlider(figure.Size, 1,50);
         figure.ChangeFigureSize();
         //figure.ChangeFigureSize(figure.Size);
     }

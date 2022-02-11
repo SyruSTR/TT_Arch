@@ -7,7 +7,7 @@ namespace DefaultNamespace
         
         public override void ChangeFigureSize()
         {
-            float newSize = Size/Mathf.Sqrt(2);
+            float newSize = Size*20/Mathf.Sqrt(2);
             GetComponent<RectTransform>().sizeDelta = new Vector2(newSize, newSize);
         }
     }

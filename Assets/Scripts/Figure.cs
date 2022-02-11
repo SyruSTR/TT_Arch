@@ -10,7 +10,8 @@ public class Figure : MonoBehaviour
 
     public virtual void ChangeFigureSize()
     {
-        GetComponent<RectTransform>().sizeDelta = new Vector2(Size, Size);
+        
+        GetComponent<RectTransform>().sizeDelta = new Vector2(Size*20, Size*20);
     }
 
     public void Start()
