@@ -19,6 +19,6 @@ public class Circle : Figure, IPickableForTarget , IPointerDownHandler , IPointe
     
     public void PickForTarget()
     {
-        _targetController.CurrentTarget.GetComponent<Cube>().ApplyTarget_sEffect(this);
+        _targetController.SelectForTarget(this);
     }
 }

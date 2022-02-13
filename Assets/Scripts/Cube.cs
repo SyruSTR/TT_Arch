@@ -16,7 +16,6 @@ namespace DefaultNamespace
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            
             if (!IsBlocked)
                 PickTarget();
         }
@@ -28,7 +27,10 @@ namespace DefaultNamespace
 
         public void PickTarget()
         {
+            
             _targetController.SelectTarget(this);
+            _targetController.ApplyEffect += ApplyTarget_sEffect;
+
         }
 
         public void ApplyTarget_sEffect<Circle>(Circle targetForTarget) where Circle : Figure
@@ -38,6 +40,7 @@ namespace DefaultNamespace
             transform.position = targetForTarget.transform.position;
             IsBlocked = true;
             _targetController.ClearTarget();
+            _targetController.ApplyEffect -= ApplyTarget_sEffect;
         }
         
 
