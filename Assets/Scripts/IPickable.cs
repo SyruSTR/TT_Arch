@@ -6,4 +6,5 @@ public interface IPickableTarget
 {
     bool IsBlocked { get; set; }
     void PickTarget();
+    void ApplyTarget_sEffect<T>(T targetForTarget) where T : Figure ;
 }

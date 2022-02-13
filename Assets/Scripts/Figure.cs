@@ -7,6 +7,7 @@ public class Figure : MonoBehaviour
 {
 
     [SerializeField] protected int _size;
+    [SerializeField] protected int _multiplaySize = 20;
 
     public int Size
     {
@@ -21,7 +22,7 @@ public class Figure : MonoBehaviour
 
     public virtual void ChangeFigureSize()
     {
-        float newSize = _size * 20;
+        float newSize = _size * _multiplaySize;
         GetComponent<RectTransform>().sizeDelta = new Vector2(newSize, newSize);
     }
 

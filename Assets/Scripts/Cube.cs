@@ -10,7 +10,7 @@ namespace DefaultNamespace
         
         public override void ChangeFigureSize()
         {
-            float newSize = _size*20/Mathf.Sqrt(2);
+            float newSize = _size*_multiplaySize/Mathf.Sqrt(2);
             GetComponent<RectTransform>().sizeDelta = new Vector2(newSize, newSize);
         }
 
@@ -29,6 +29,15 @@ namespace DefaultNamespace
         public void PickTarget()
         {
             _targetController.SelectTarget(this);
+        }
+
+        public void ApplyTarget_sEffect<Circle>(Circle targetForTarget) where Circle : Figure
+        {
+            
+            if (targetForTarget.Size != Size) return;
+            transform.position = targetForTarget.transform.position;
+            IsBlocked = true;
+            _targetController.ClearTarget();
         }
         
 

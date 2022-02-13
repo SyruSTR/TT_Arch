@@ -19,11 +19,6 @@ public class Circle : Figure, IPickableForTarget , IPointerDownHandler , IPointe
     
     public void PickForTarget()
     {
-        if (_targetController.CurrentTarget.Size == Size)
-        {
-            _targetController.CurrentTarget.transform.position = transform.position;
-            _targetController.CurrentTarget.GetComponent<Cube>().IsBlocked = true;
-            _targetController.ClearTarget();
-        }
+        _targetController.CurrentTarget.GetComponent<Cube>().ApplyTarget_sEffect(this);
     }
 }
