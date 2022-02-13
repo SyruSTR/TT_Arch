@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace DefaultNamespace
@@ -16,7 +17,9 @@ namespace DefaultNamespace
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            if (!IsBlocked)
+            if(_targetController.CurrentTarget != null)
+                PickForTarget();
+            else if (!IsBlocked)
                 PickTarget();
         }
         //Без него не хочет работать OnPointerUp
@@ -33,10 +36,12 @@ namespace DefaultNamespace
 
         }
 
-        public void ApplyTarget_sEffect<Circle>(Circle targetForTarget) where Circle : Figure
+        public void ApplyTarget_sEffect<T>(T targetForTarget) where T : Figure
         {
-            
-            if (targetForTarget.Size != Size) return;
+            if(!(targetForTarget is Circle))
+                return;;
+            if (targetForTarget.Size != Size) 
+                return;
             transform.position = targetForTarget.transform.position;
             IsBlocked = true;
             _targetController.ClearTarget();
@@ -46,7 +51,7 @@ namespace DefaultNamespace
 
         public void PickForTarget()
         {
-            
+            _targetController.SelectForTarget(this);
         }
     }
 }

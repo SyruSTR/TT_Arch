@@ -12,7 +12,7 @@ public class Figure : MonoBehaviour
     public int Size
     {
         get { return _size; }
-        private set { _size = value; }
+        set { _size = value; }
     }
     
     
