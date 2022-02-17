@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class TextChanging : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _tmpText;
-    [SerializeField] private string _pattern;
+    [SerializeField] protected TMP_Text _tmpText;
+    [SerializeField] protected string _pattern;
     private PlayerData _playerData;
     
     // public void ChangeText(string text)
@@ -21,7 +21,7 @@ public class TextChanging : MonoBehaviour
         _tmpText.text = string.Format(_pattern, integerForText);
     }
     
-    private void Awake()
+    public virtual void Awake()
     {
         _tmpText = GetComponent<TMP_Text>();
         _playerData = FindObjectOfType<PlayerData>();
@@ -30,6 +30,6 @@ public class TextChanging : MonoBehaviour
 
     private void Start()
     {
-        ChangeText(0);
+        //ChangeText(0);
     }
 }

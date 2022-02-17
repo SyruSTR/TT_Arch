@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3812165086267134483
 RectTransform:
   m_ObjectHideFlags: 0
@@ -67,13 +67,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3812165086267134480}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e9d8b4a4a6ce1f4fba3a46ade3b41dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tranglePrefab: {fileID: 5079768081576912097, guid: 15360e4bd0576b541b1144f8c791dccd,
+  tranglePrefab: {fileID: 5079768081576912097, guid: 15360e4bd0576b541b1144f8c791dccd,
     type: 3}
+  countEnergyForLevel: 0
 --- !u!1 &6526950476185267191
 GameObject:
   m_ObjectHideFlags: 0

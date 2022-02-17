@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4326882928463575228}
+  - component: {fileID: 760898434}
+  - component: {fileID: 760898433}
   m_Layer: 5
   m_Name: level 2
   m_TagString: Untagged
@@ -40,6 +42,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &760898434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4326882928463575231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9704a53aca72757449e04c7a2367783b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CirclePrefab: {fileID: 8131583007035516088, guid: a8247476a1a97064cb41815cb64b0ec0,
+    type: 3}
+  CubePrefab: {fileID: 1105109265510208609, guid: 0aaeed9dff2467d4fbbfd44aed7664e3,
+    type: 3}
+--- !u!114 &760898433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4326882928463575231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9d8b4a4a6ce1f4fba3a46ade3b41dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tranglePrefab: {fileID: 5079768081576912097, guid: 15360e4bd0576b541b1144f8c791dccd,
+    type: 3}
+  countEnergyForLevel: 0
 --- !u!1001 &4326882927651117565
 PrefabInstance:
   m_ObjectHideFlags: 0

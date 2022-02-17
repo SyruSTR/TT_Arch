@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,5 +19,11 @@ public class PlayerData : MonoBehaviour
             _movesCount = value;
             ChangeMoves?.Invoke(_movesCount);
         }
+    }
+
+    private void Start()
+    {
+        _movesCount = 0;
+        ChangeMoves?.Invoke(_movesCount);
     }
 }
