@@ -333,8 +333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beec1bda68db4216ba783ab42e7c32f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tmpText: {fileID: 189391395}
-  _pattern: 'Energy: {0}'
+  tmpText: {fileID: 189391395}
+  pattern: 'Energy: {0}'
 --- !u!1 &238738947
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39
+  m_fontSize: 116.35
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -966,7 +966,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39
+  m_fontSize: 116.35
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1478,7 +1478,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 50.65
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1694,7 +1694,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39
+  m_fontSize: 116.35
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1890,8 +1890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 775e570513bb9de43a00c8be3e63a961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tmpText: {fileID: 1526598125}
-  _pattern: 'Moves: {0}'
+  tmpText: {fileID: 1526598125}
+  pattern: 'Moves: {0}'
 --- !u!1 &1635903391
 GameObject:
   m_ObjectHideFlags: 0
@@ -2611,7 +2611,6 @@ GameObject:
   - component: {fileID: 8830740377030767777}
   - component: {fileID: 8830740377030767776}
   - component: {fileID: 8830740377030767774}
-  - component: {fileID: 8830740377030767775}
   m_Layer: 5
   m_Name: Level Menu
   m_TagString: Untagged
@@ -2635,18 +2634,6 @@ MonoBehaviour:
   - {fileID: 3812165086267134480, guid: 61ee216029ebbae40a9dab3c3d687f88, type: 3}
   - {fileID: 4326882928463575231, guid: f8d6f94719bc43e459cb5a84955a0fe4, type: 3}
   - {fileID: 4588138034766737190, guid: 06d5ed82c5f43d94c990f9a57f4c1b46, type: 3}
---- !u!114 &8830740377030767775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8830740377030767773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c88a4f4eaa641145b964d9c6a59d84a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8830740377030767776
 MonoBehaviour:
   m_ObjectHideFlags: 0
