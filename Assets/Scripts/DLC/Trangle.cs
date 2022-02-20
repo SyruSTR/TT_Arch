@@ -38,8 +38,11 @@ public class Trangle : Figure, IPointerUpHandler, IPointerDownHandler, IPickable
 
     public void ApplyTarget_sEffect<T>(T targetForTarget) where T : Figure
     {
-        if(targetForTarget.GetType() != typeof(Cube)) return;
-        if (PlayerDataDLC.Energy <= 0) return;
+        if(targetForTarget.GetType() != typeof(Cube)) 
+            return;
+        if (PlayerDataDLC.Energy <= 0) 
+            return;
+        ChangePlayerData();
         targetForTarget.Size--;
         targetForTarget.ChangeFigureSize();
         _targetController.ApplyEffect -= ApplyTarget_sEffect;

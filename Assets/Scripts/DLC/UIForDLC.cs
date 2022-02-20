@@ -19,15 +19,25 @@ public class UIForDLC : MonoBehaviour
     private void Awake()
     {
         _panelRectTransform = GetComponent<RectTransform>();
-        _isActiveDLC = FindObjectOfType<LevelRedactorDLC>().enabled;
-        Debug.Log("test: "+_isActiveDLC);
+        
+        
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        for (int i = 0; i < gameObjectsForDLC.Length; i++)
+        try
         {
-            gameObjectsForDLC[i].SetActive(_isActiveDLC);
+            _isActiveDLC = FindObjectOfType<LevelRedactorDLC>().enabled;
+        }
+        catch (NullReferenceException e)
+        {
+            _isActiveDLC = false;
+        }
+        
+        
+        foreach (var gm in gameObjectsForDLC)
+        {
+            gm.SetActive(_isActiveDLC);
         }
 
 
@@ -37,5 +47,12 @@ public class UIForDLC : MonoBehaviour
         _panelRectTransform.sizeDelta = new Vector2(
             _isActiveDLC ? sizeForDLC.y : mainSize.y
             , _panelRectTransform.sizeDelta.y);
+        //Своё отработал, ждёт включения...
+        enabled = false;
+    }
+
+    private void Start()
+    {
+        
     }
 }

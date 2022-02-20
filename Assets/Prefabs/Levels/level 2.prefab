@@ -72,7 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tranglePrefab: {fileID: 5079768081576912097, guid: 15360e4bd0576b541b1144f8c791dccd,
     type: 3}
-  countEnergyForLevel: 0
+  countEnergyForLevel: 1
 --- !u!1001 &4326882927651117565
 PrefabInstance:
   m_ObjectHideFlags: 0
