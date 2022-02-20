@@ -13,6 +13,7 @@ public class Circle : Figure, IPickableForTarget , IPointerDownHandler , IPointe
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        
         if (_targetController.CurrentTarget != null)
             PickForTarget();
     }

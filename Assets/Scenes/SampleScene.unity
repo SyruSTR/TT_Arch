@@ -592,7 +592,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 116.35
+  m_fontSize: 39
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -966,7 +966,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 116.35
+  m_fontSize: 39
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1478,7 +1478,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50.65
+  m_fontSize: 18
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1694,7 +1694,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 116.35
+  m_fontSize: 39
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2634,7 +2634,7 @@ MonoBehaviour:
   LevelsPrefabs:
   - {fileID: 3812165086267134480, guid: 61ee216029ebbae40a9dab3c3d687f88, type: 3}
   - {fileID: 4326882928463575231, guid: f8d6f94719bc43e459cb5a84955a0fe4, type: 3}
-  - {fileID: 4326882928463575231, guid: f8d6f94719bc43e459cb5a84955a0fe4, type: 3}
+  - {fileID: 4588138034766737190, guid: 06d5ed82c5f43d94c990f9a57f4c1b46, type: 3}
 --- !u!114 &8830740377030767775
 MonoBehaviour:
   m_ObjectHideFlags: 0
