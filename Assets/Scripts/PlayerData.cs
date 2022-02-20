@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Класс, который хранит информацию о игроке
 public class PlayerData : MonoBehaviour
 {
     private int _movesCount;

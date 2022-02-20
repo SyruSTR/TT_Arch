@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+
+//Класс для редактора фигур из DLC
 public class LevelRedactorDLC : MonoBehaviour, IChandedPlayerDataDLC
 {
     private bool _isActive;

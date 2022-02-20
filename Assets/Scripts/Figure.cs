@@ -3,32 +3,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Основной класс для Всех фигур
 public class Figure : MonoBehaviour
 {
 
-    [SerializeField] protected int _size;
-    [SerializeField] protected int _multiplaySize = 20;
+    [SerializeField] protected int size;
+    [SerializeField] protected int multiplaySize = 20;
 
     public int Size
     {
-        get { return _size; }
-        set { _size = value; }
+        get => size;
+        set => size = value;
     }
     
     
 
     private RectTransform _rectTransform;
-    protected TargetController _targetController;
-
+    protected TargetController TargetController;
+    
+    //Изменяем размер фигуры
     public virtual void ChangeFigureSize()
     {
-        float newSize = _size * _multiplaySize;
+        float newSize = size * multiplaySize;
         GetComponent<RectTransform>().sizeDelta = new Vector2(newSize, newSize);
     }
 
     public void Start()
     {
-        _targetController = FindObjectOfType<TargetController>();
+        TargetController = FindObjectOfType<TargetController>();
         ChangeFigureSize();
     }
 }

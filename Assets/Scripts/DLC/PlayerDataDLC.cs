@@ -5,6 +5,7 @@ using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+//Класс для хранения информации о игроке для DLC
 public class PlayerDataDLC : MonoBehaviour
 {
     private int _energyCount;
@@ -15,15 +16,12 @@ public class PlayerDataDLC : MonoBehaviour
 
     public int Energy
     {
-        get { return _energyCount; }
+        get => _energyCount;
         set
         {
-            if (_energyCount >0)
-            {
-                _energyCount = value;
-                ChangeEnergy?.Invoke(_energyCount);
-                
-            }
+            if (_energyCount <= 0) return;
+            _energyCount = value;
+            ChangeEnergy?.Invoke(_energyCount);
 
         }
     }

@@ -17,13 +17,21 @@ public class InstantiateLevel : MonoBehaviour
 
     public void CreateLevel(int levelId)
     {
+        //Если в памяти был другой игровой объект, удаляем его со сцены, он нам больше не нужен
         if (_currentLevelGameObject != null)
         {
             Destroy(_currentLevelGameObject);
         }
 
-        var test = _levelsData.GetLevel(levelId);
-        _currentLevelGameObject = Instantiate(_levelsData.GetLevel(levelId), Vector3.zero, Quaternion.identity, transform);
+        //Берём нужный уровень, и создаём его на сцене)
+        var levelPrefab = _levelsData.GetLevel(levelId);
+        if (levelPrefab != null)
+            _currentLevelGameObject =
+                Instantiate(levelPrefab, Vector3.zero, Quaternion.identity, transform);
+        else
+            Debug.LogError($"Уровня с ID: {levelId}  - не существует!!!!");
+            
+        
         
     }
     

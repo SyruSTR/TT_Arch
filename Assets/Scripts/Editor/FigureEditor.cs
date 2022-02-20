@@ -8,6 +8,7 @@ using UnityEngine;
 [CustomEditor(typeof(Figure),true)]
 public class FigureEditor : Editor
 {
+    //Метод для отрисовки GUI в Inspector
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();

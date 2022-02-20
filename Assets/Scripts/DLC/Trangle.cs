@@ -5,6 +5,8 @@ using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
+//Класс треугольника
 public class Trangle : Figure, IPointerUpHandler, IPointerDownHandler, IPickableTarget
 {
     public bool IsBlocked { get; set; }
@@ -32,20 +34,27 @@ public class Trangle : Figure, IPointerUpHandler, IPointerDownHandler, IPickable
     }
     public void PickTarget()
     {
-        _targetController.SelectTarget(this);
-        _targetController.ApplyEffect += ApplyTarget_sEffect;
+        TargetController.SelectTarget(this);
+        TargetController.ApplyEffect += ApplyTarget_sEffect;
     }
-
+    //Применения еффекта треугольника
     public void ApplyTarget_sEffect<T>(T targetForTarget) where T : Figure
     {
+        //Цель НЕ куб? Обрываем метод)
         if(targetForTarget.GetType() != typeof(Cube)) 
             return;
+        //А у вас есть энергия?))) Нет?!?!?! ОБРЫВАЕМ МЕТОД!!!!!
         if (PlayerDataDLC.Energy <= 0) 
             return;
+        //Изменяем значение игрока
         ChangePlayerData();
+        //Уменьшаем значение размера куба
         targetForTarget.Size--;
+        //Изменяем размер куба
         targetForTarget.ChangeFigureSize();
-        _targetController.ApplyEffect -= ApplyTarget_sEffect;
+        //Отписываемся от Евента
+        TargetController.ApplyEffect -= ApplyTarget_sEffect;
+        //Не забёдем уничтожить треугольник, как в ТЗ)
         Destroy(gameObject);
             
     }

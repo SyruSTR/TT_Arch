@@ -87,8 +87,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f35d53c85234a19b36289e5dbcb7a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _size: 10
-  _multiplaySize: 20
+  size: 10
+  multiplaySize: 20
 --- !u!1 &4588138034766737190
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,9 +145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9704a53aca72757449e04c7a2367783b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CirclePrefab: {fileID: 8131583007035516088, guid: a8247476a1a97064cb41815cb64b0ec0,
+  circlePrefab: {fileID: 8131583007035516088, guid: a8247476a1a97064cb41815cb64b0ec0,
     type: 3}
-  CubePrefab: {fileID: 1105109265510208609, guid: 0aaeed9dff2467d4fbbfd44aed7664e3,
+  cubePrefab: {fileID: 1105109265510208609, guid: 0aaeed9dff2467d4fbbfd44aed7664e3,
     type: 3}
 --- !u!114 &7901550973028465110
 MonoBehaviour:
@@ -251,8 +251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f47fb77e5676a97489d87f171571d690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _size: 10
-  _multiplaySize: 20
+  size: 10
+  multiplaySize: 20
 --- !u!1 &6696258275285988423
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,8 +340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f35d53c85234a19b36289e5dbcb7a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _size: 9
-  _multiplaySize: 20
+  size: 9
+  multiplaySize: 20
 --- !u!1 &6741238829558185861
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,8 +429,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974f6819481b4e143acf19352996efc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _size: 4
-  _multiplaySize: 20
+  size: 4
+  multiplaySize: 20
 --- !u!1 &7124479012233507848
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,8 +518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f35d53c85234a19b36289e5dbcb7a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _size: 5
-  _multiplaySize: 20
+  size: 5
+  multiplaySize: 20
 --- !u!1 &8411402856614139479
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,8 +607,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f47fb77e5676a97489d87f171571d690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _size: 5
-  _multiplaySize: 20
+  size: 5
+  multiplaySize: 20
 --- !u!1 &8816085269754954225
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,5 +696,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f47fb77e5676a97489d87f171571d690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _size: 8
-  _multiplaySize: 20
+  size: 8
+  multiplaySize: 20

@@ -12,7 +12,7 @@ namespace DefaultNamespace
         
         public override void ChangeFigureSize()
         {
-            float newSize = _size*_multiplaySize/Mathf.Sqrt(2);
+            float newSize = size*multiplaySize/Mathf.Sqrt(2);
             GetComponent<RectTransform>().sizeDelta = new Vector2(newSize, newSize);
         }
         
@@ -27,10 +27,11 @@ namespace DefaultNamespace
         {
             PlayerData.MovesCount++;
         }
-
+        //Когда мы кликаем по объекту, то мы его выбираем целью ИЛИ целью для применения эффекта
+        //И мы не можем выбрать данный объект целью, если цель выбрана
         public void OnPointerUp(PointerEventData eventData)
         {
-            if(_targetController.CurrentTarget != null)
+            if(TargetController.CurrentTarget != null)
                 PickForTarget();
             else if (!IsBlocked)
                 PickTarget();
@@ -40,32 +41,38 @@ namespace DefaultNamespace
         {
             
         }
-
+        //Запоминаем кто наша цель и какой метод должен сработать, если выбрали цель для Эффекта
         public void PickTarget()
         {
-            
-            _targetController.SelectTarget(this);
-            _targetController.ApplyEffect += ApplyTarget_sEffect;
+            TargetController.SelectTarget(this);
+            TargetController.ApplyEffect += ApplyTarget_sEffect;
 
         }
-
+        //Применяем эффект Куба
         public void ApplyTarget_sEffect<T>(T targetForTarget) where T : Figure
         {
+            //Если целью был не круг, не продалжаем) 
             if(!(targetForTarget is Circle))
-                return;;
+                return;
+            //Если размеры не совпали, не продолжаем
             if (targetForTarget.Size != Size) 
                 return;
+            //Переместим Куб в центр Круга
             transform.position = targetForTarget.transform.position;
+            //Изменим занчение игрока
             ChangePlayerData();
+            //И заблокируем КУб для манипуляций
             IsBlocked = true;
-            _targetController.ClearTarget();
-            _targetController.ApplyEffect -= ApplyTarget_sEffect;
+            //Ах да, забыли Куб, как цель)
+            TargetController.ClearTarget();
+            //И отписались от события, во избежания казусов
+            TargetController.ApplyEffect -= ApplyTarget_sEffect;
         }
         
 
         public void PickForTarget()
         {
-            _targetController.SelectForTarget(this);
+            TargetController.SelectForTarget(this);
         }
     }
 }

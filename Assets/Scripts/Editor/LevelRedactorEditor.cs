@@ -7,6 +7,7 @@ public class LevelRedactorEditor : Editor
 {
     [SerializeField]
     private int sizeFigures;
+    //Метод для отрисовки GUI в Inspector
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();

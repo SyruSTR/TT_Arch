@@ -6,6 +6,7 @@
     [CustomEditor(typeof(LevelRedactorDLC))]
     public class LevelRedactorDLCEditor : Editor
     {
+        //Метод для отрисовки GUI в Inspector
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();

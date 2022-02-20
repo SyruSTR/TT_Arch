@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 760898434}
   - component: {fileID: 760898433}
   m_Layer: 5
-  m_Name: level 2
+  m_Name: Level 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,9 +54,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9704a53aca72757449e04c7a2367783b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CirclePrefab: {fileID: 8131583007035516088, guid: a8247476a1a97064cb41815cb64b0ec0,
+  circlePrefab: {fileID: 8131583007035516088, guid: a8247476a1a97064cb41815cb64b0ec0,
     type: 3}
-  CubePrefab: {fileID: 1105109265510208609, guid: 0aaeed9dff2467d4fbbfd44aed7664e3,
+  cubePrefab: {fileID: 1105109265510208609, guid: 0aaeed9dff2467d4fbbfd44aed7664e3,
     type: 3}
 --- !u!114 &760898433
 MonoBehaviour:
@@ -192,6 +192,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6816165732726178780, guid: 0aaeed9dff2467d4fbbfd44aed7664e3,
         type: 3}
+      propertyPath: size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816165732726178780, guid: 0aaeed9dff2467d4fbbfd44aed7664e3,
+        type: 3}
       propertyPath: _size
       value: 5
       objectReference: {fileID: 0}
@@ -322,6 +327,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6816165732726178780, guid: 0aaeed9dff2467d4fbbfd44aed7664e3,
         type: 3}
+      propertyPath: size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816165732726178780, guid: 0aaeed9dff2467d4fbbfd44aed7664e3,
+        type: 3}
       propertyPath: _size
       value: 9
       objectReference: {fileID: 0}
@@ -340,6 +350,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4326882928463575228}
     m_Modifications:
+    - target: {fileID: 5651330207128130030, guid: a8247476a1a97064cb41815cb64b0ec0,
+        type: 3}
+      propertyPath: size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5651330207128130030, guid: a8247476a1a97064cb41815cb64b0ec0,
         type: 3}
       propertyPath: _size
@@ -470,6 +485,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4326882928463575228}
     m_Modifications:
+    - target: {fileID: 5651330207128130030, guid: a8247476a1a97064cb41815cb64b0ec0,
+        type: 3}
+      propertyPath: size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5651330207128130030, guid: a8247476a1a97064cb41815cb64b0ec0,
         type: 3}
       propertyPath: _size
@@ -704,6 +724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024244480784959219, guid: 15360e4bd0576b541b1144f8c791dccd,
+        type: 3}
+      propertyPath: size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5079768081576912097, guid: 15360e4bd0576b541b1144f8c791dccd,
         type: 3}
